@@ -1,4 +1,4 @@
-**v-1.0 基本参数：**
+## v-1.0 基本参数：
 *   Expect threshold (E threshold)（evalue &lt;Real&gt;）：Expectation value (E) threshold for saving hits Default = `**<font color="#ff0000">10</font>**'.
 *   Alignment view（outfmt &lt;String&gt;）：
 
@@ -14,7 +14,7 @@
    *   2000
    *   20000
 
-**v-1.1 新增参数(参考)：**
+## v-1.1 新增参数 (参考)：
 *   （**-word_size，-W**）word_size <Integer>：Word size for wordfinder algorithm (length of best perfect match)
 
    设定字长大小，blastn为11， megablast 为28，其他为3。
