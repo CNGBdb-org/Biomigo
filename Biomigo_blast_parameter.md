@@ -22,7 +22,7 @@
 
    设定字长大小，blastn为11， megablast 为28，其他为3。
 
-   1. **ncbi blast：**(**粗体**为网站默认值)
+   1. **[ncbi blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)：**( **粗体** 为网站默认值)
       * blastn：7、**11**、15
       *   blastp：2、3、**6**
       *   blastx：2、3、**6**
@@ -36,7 +36,7 @@
 
    起始空位罚分。
 
-   1. **ebi blast：**(blastall 默认default=-1)
+   1. **[ebi blast](http://www.ebi.ac.uk/Tools/sss/ncbiblast/nucleotide.html)：**(blastall, default=-1)
 
       *   blastn：default、0、1、2、5
       *   blastp：default、6-13、15、16、19
@@ -44,7 +44,7 @@
       *   tblastn：default、6-13、15-16、19
       *   tblastx：default、6-13、15-16、19
 
-   2. **ncbi blast ：**
+   2. **[ncbi blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)：**
 
       *   **blastn：**(gapopen, gapextend) = (**5, 2**)
    
@@ -58,13 +58,13 @@
    
    3. **biomingo_blast values：**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
    
-      *   **from 0 to 25, sep=1**
+      *   **from 0 to 25, sep=1**
       
 *  **-gapextend**：Cost to extend a gap.
 
    空位延伸罚分。
 
-   1. **ebi blast：**(blastall 默认default=-1)
+   1. **[ebi blast](http://www.ebi.ac.uk/Tools/sss/ncbiblast/nucleotide.html)：**(blastall 默认default=-1)
 
       *   blastn：default、2
       *   blastp：1
@@ -72,7 +72,7 @@
       *   tblastn：default、1
       *   tblastx：default、1
 
-   2. **ncbi blast ：**
+   2. **[ncbi blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome) ：**
 
       *   **blastn：**(gapopen, gapextend) = (**5,2**)
    
@@ -88,7 +88,7 @@
 
 *  **-matrix**：Comparison Matrix（default = BLOSUM62）
 
-   1. **ebi blast：**
+   1. **[ebi blast](http://www.ebi.ac.uk/Tools/sss/ncbiblast/nucleotide.html)：**
 
       *   blastn：无
    
