@@ -14,68 +14,87 @@
    *   2000
    *   20000
 
+----
+
 ## v-1.1 新增参数 (参考)：
-*   （**-word_size**）word_size <Integer>：Word size for wordfinder algorithm (length of best perfect match)
+
+*  **-word_size**：word_size &lt;Integer&gt;,Word size for wordfinder algorithm (length of best perfect match).
 
    设定字长大小，blastn为11， megablast 为28，其他为3。
 
-   **ncbi blast：**
-   *   blastn：7、11、15
-   *   blastp：2、3、<font color="#ff0000">**6**</font>
-   *   blastx：2、3、<font color="#ff0000" style="font-size: 18.4615px; line-height: 32.0123px;">**6**</font>
-   *   tblastn：2、3、<font color="#ff0000" style="font-size: 18.4615px; line-height: 32.0123px;">**6**</font>
-   *   tblastx：2、<font color="#ff0000">**3**</font></font>
+   1. **ncbi blast：**(**粗体**为网站默认值)
+      * blastn：7、**11**、15
+      *   blastp：2、3、**6**
+      *   blastx：2、3、**6**
+      *   tblastn：2、3、**6**
+      *   tblastx：2、**3**
 
-   <font color="#ff0000">**biomingo_blast values：**</font>
-   *   **2、3、6、7、11、15（或者：2 - 15）。**
+   2. **biomingo_blast values：**
+      *   **from 2 to 15, sep=1**
 
-*   （**-gapopen**）Cost to open a gap \[Integer\] 
+*  **-gapopen**：Cost to open a gap \[Integer\]
 
    起始空位罚分。
 
-   **ebi blast：**(blastall 默认default=-1)
+   1. **ebi blast：**(blastall 默认default=-1)
 
-   *   blastn：default、0、1、2、5
-   *   blastp：default、6-13、15、16、19
-   *   blastx：default、6-13、15、16、19
-   *   tblastn：default、6-13、15-16、19
-   *   tblastx：default、6-13、15-16、19
+      *   blastn：default、0、1、2、5
+      *   blastp：default、6-13、15、16、19
+      *   blastx：default、6-13、15、16、19
+      *   tblastn：default、6-13、15-16、19
+      *   tblastx：default、6-13、15-16、19
 
-   **<font color="#ff0000">biomingo_blast values：</font>**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
+   2. **ncbi blast ：**
 
-   *   **blastn：**(gapopen, gapextend) = (**5,2**(default)
-   *   **blastp、blastx、tblastn：**(gapopen, gapextend) = (**11,1**(default))
-   *   **tblastx：**无
+      *   **blastn：**(gapopen, gapextend) = (**5, 2**)
    
-
-*   （**-gapextend**）Cost to extend a gap)
+      ![blastn](https://github.com/CNGB-DC/Biomigo/blob/master/Images/blastn_gap_parameter.png)
+   
+      *   **blastp、blastx、tblastn：**(gapopen, gapextend) = (**11, 1**)
+   
+      ![blastp](https://github.com/CNGB-DC/Biomigo/blob/master/Images/blastp-x_gap_parameter.png)
+   
+      *   **tblastx：**无
+   
+   3. **biomingo_blast values：**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
+   
+      *   **from 0 to 25, sep=1**
+      
+*  **-gapextend**：Cost to extend a gap.
 
    空位延伸罚分。
 
-   **ebi blast：**(blastall 默认default=-1)
+   1. **ebi blast：**(blastall 默认default=-1)
 
-   *   blastn：default、2
-   *   blastp：1
-   *   blastx：1
-   *   tblastn：default、1
-   *   tblastx：default、1
+      *   blastn：default、2
+      *   blastp：1
+      *   blastx：1
+      *   tblastn：default、1
+      *   tblastx：default、1
 
-   **<font color="#ff0000">biomingo_blast values：</font>**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
+   2. **ncbi blast ：**
 
-   *   **blastn：**(gapopen, gapextend) = (**5,2**(default) or **4,4** or **2,4** or **0,4** or **3,3** or **6,2** or **5,2** or **4,2** or **2,2**)
-   *   **blastp：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**) 
-   *   **blastx：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
-   *   **tblastn：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
-   *   **tblastx：**无
+      *   **blastn：**(gapopen, gapextend) = (**5,2**)
+   
+      ![blastn](https://github.com/CNGB-DC/Biomigo/blob/master/Images/blastn_gap_parameter.png)
+   
+      *   **blastp、blastx、tblastn：**(gapopen, gapextend) = (**11,1**)
+   
+      ![blastp](https://github.com/CNGB-DC/Biomigo/blob/master/Images/blastp-x_gap_parameter.png)
+      
+      *   **tblastx：**无
 
-*   （**-matrix**,**-M**）Comparison Matrix：default = BLOSUM62
+   3. **biomingo_blast values：**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
 
-   **ebi blast：**
+*  **-matrix**：Comparison Matrix（default = BLOSUM62）
 
-   *   blastn：无
-   *   blastp、blastx、tblastn、tblastx：BLOSUM45、BLOSUM50、BLOSUM62（default）、BLOSUM80、BLOSUM90、PAM30、PAM70、PAM250
+   1. **ebi blast：**
 
-   **<font color="#ff0000">biomingo_blast values(except blastn )：</font>**
+      *   blastn：无
+   
+      *   blastp、blastx、tblastn、tblastx：BLOSUM45、BLOSUM50、BLOSUM62（default）、BLOSUM80、BLOSUM90、PAM30、PAM70、PAM250
 
-   *   <font color="#ff0000">**BLOSUM45、BLOSUM50、BLOSUM62（default）、BLOSUM80、BLOSUM90、PAM30、PAM70、PAM250**</font>
+   2. **biomingo_blast values(except blastn )：**
+
+      *   **BLOSUM45、BLOSUM50、BLOSUM62（default）、BLOSUM80、BLOSUM90、PAM30、PAM70、PAM250**
 
