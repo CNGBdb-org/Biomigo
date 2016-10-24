@@ -15,7 +15,7 @@
    *   20000
 
 ## v-1.1 新增参数 (参考)：
-*   （**-word_size，-W**）word_size <Integer>：Word size for wordfinder algorithm (length of best perfect match)
+*   （**-word_size**）word_size <Integer>：Word size for wordfinder algorithm (length of best perfect match)
 
    设定字长大小，blastn为11， megablast 为28，其他为3。
 
@@ -29,11 +29,11 @@
    <font color="#ff0000">**biomingo_blast values：**</font>
    *   **2、3、6、7、11、15（或者：2 - 15）。**
 
-*   （**-G**, **-gapopen**）Cost to open a gap (zero invokes default behavior) \[Integer\] (default [-1] )
+*   （**-gapopen**）Cost to open a gap (zero invokes default behavior) \[Integer\] 
 
    起始空位罚分。
 
-   **ebi blast：**
+   **ebi blast：**(blastall 默认default=-1)
 
    *   blastn：default、0、1、2、5
    *   blastp：default、6-13、15、16、19
@@ -41,15 +41,20 @@
    *   tblastn：default、6-13、15-16、19
    *   tblastx：default、6-13、15-16、19
 
-   **<font color="#ff0000">biomingo_blast values：</font>**
+   **<font color="#ff0000">biomingo_blast values：</font>**（以 NBK279675 为标准）
 
-   *   **<font color="#ff0000">default、0 - 25</font>**
+   *   **blastn：**(gapopen, gapextend) = (**5,2**(default) or **4,4** or **2,4** or **0,4** or **3,3** or **6,2** or **5,2** or **4,2** or **2,2**)
+   *   **blastp：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**) 
+   *   **blastx：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
+   *   **tblastn：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
+   *   **tblastx：**无
+   
 
 *   （**-E**, **-gapextend**）Cost to extend a gap \[Integer\] (default [-1] )
 
    空位延伸罚分。
 
-   **ebi blast：**
+   **ebi blast：**(blastall 默认default=-1)
 
    *   blastn：default、2
    *   blastp：1
@@ -57,9 +62,13 @@
    *   tblastn：default、1
    *   tblastx：default、1
 
-   **<font color="#ff0000">biomingo_blast values：</font>**
+   **<font color="#ff0000">biomingo_blast values：</font>**（以 NBK279675 为标准）
 
-   *   <font color="#ff0000">**default、0 - 10**</font>
+   *   **blastn：**(gapopen, gapextend) = (**5,2**(default) or **4,4** or **2,4** or **0,4** or **3,3** or **6,2** or **5,2** or **4,2** or **2,2**)
+   *   **blastp：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**) 
+   *   **blastx：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
+   *   **tblastn：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
+   *   **tblastx：**无
 
 *   （**-matrix**,**-M**）Comparison Matrix：default = BLOSUM62
 
