@@ -29,7 +29,7 @@
    <font color="#ff0000">**biomingo_blast values：**</font>
    *   **2、3、6、7、11、15（或者：2 - 15）。**
 
-*   （**-gapopen**）Cost to open a gap (zero invokes default behavior) \[Integer\] 
+*   （**-gapopen**）Cost to open a gap \[Integer\] 
 
    起始空位罚分。
 
@@ -41,7 +41,7 @@
    *   tblastn：default、6-13、15-16、19
    *   tblastx：default、6-13、15-16、19
 
-   **<font color="#ff0000">biomingo_blast values：</font>**（以 NBK279675 为标准）
+   **<font color="#ff0000">biomingo_blast values：</font>**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
 
    *   **blastn：**(gapopen, gapextend) = (**5,2**(default) or **4,4** or **2,4** or **0,4** or **3,3** or **6,2** or **5,2** or **4,2** or **2,2**)
    *   **blastp：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**) 
@@ -50,7 +50,7 @@
    *   **tblastx：**无
    
 
-*   （**-E**, **-gapextend**）Cost to extend a gap \[Integer\] (default [-1] )
+*   （**-gapextend**）Cost to extend a gap)
 
    空位延伸罚分。
 
@@ -62,7 +62,7 @@
    *   tblastn：default、1
    *   tblastx：default、1
 
-   **<font color="#ff0000">biomingo_blast values：</font>**（以 NBK279675 为标准）
+   **<font color="#ff0000">biomingo_blast values：</font>**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
 
    *   **blastn：**(gapopen, gapextend) = (**5,2**(default) or **4,4** or **2,4** or **0,4** or **3,3** or **6,2** or **5,2** or **4,2** or **2,2**)
    *   **blastp：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**) 
