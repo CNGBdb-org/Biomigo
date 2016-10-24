@@ -43,10 +43,8 @@
 
    **<font color="#ff0000">biomingo_blast values：</font>**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
 
-   *   **blastn：**(gapopen, gapextend) = (**5,2**(default) or **4,4** or **2,4** or **0,4** or **3,3** or **6,2** or **5,2** or **4,2** or **2,2**)
-   *   **blastp：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**) 
-   *   **blastx：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
-   *   **tblastn：**(gapopen, gapextend) = (**11,2** or **10,2** or **9,2** or **8,2** or **7,2** or **6,2** or **13,1** or **12,1** or **11,1**(default) or **10,1** or **9,1**)
+   *   **blastn：**(gapopen, gapextend) = (**5,2**(default)
+   *   **blastp、blastx、tblastn：**(gapopen, gapextend) = (**11,1**(default))
    *   **tblastx：**无
    
 
