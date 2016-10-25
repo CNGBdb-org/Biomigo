@@ -36,16 +36,12 @@
 *  **-gapopen**：Cost to open a gap \[Integer\]
 
    起始空位罚分。
+   
+*  **-gapextend**：Cost to extend a gap.
 
-   1. **[ebi blast](http://www.ebi.ac.uk/Tools/sss/ncbiblast/nucleotide.html)：**(blastall, default=-1)
+   空位延伸罚分。
 
-      *   blastn：default、0、1、2、5
-      *   blastp：default、6-13、15、16、19
-      *   blastx：default、6-13、15、16、19
-      *   tblastn：default、6-13、15-16、19
-      *   tblastx：default、6-13、15-16、19
-
-   2. **[ncbi blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)：**
+   1. **[ncbi blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)：**
 
       *   **blastn：**(gapopen, gapextend) = (**5, 2**)
    
@@ -57,35 +53,31 @@
    
       *   **tblastx：**无
    
-   3. **biomingo_blast values：**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
+   2. **biomingo_blast values：**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
    
-      *   **from 0 to 25, sep=1**
-      
-*  **-gapextend**：Cost to extend a gap.
-
-   空位延伸罚分。
-
-   1. **[ebi blast](http://www.ebi.ac.uk/Tools/sss/ncbiblast/nucleotide.html)：**(blastall 默认default=-1)
-
-      *   blastn：default、2
-      *   blastp：1
-      *   blastx：1
-      *   tblastn：default、1
-      *   tblastx：default、1
-
-   2. **[ncbi blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome) ：**
-
-      *   **blastn：**(gapopen, gapextend) = (**5,2**)
-   
-      ![blastn](https://github.com/CNGB-DC/Biomigo/blob/master/Images/blastn_gap_parameter.png)
-   
-      *   **blastp、blastx、tblastn：**(gapopen, gapextend) = (**11,1**)
-   
-      ![blastp](https://github.com/CNGB-DC/Biomigo/blob/master/Images/blastp-x_gap_parameter.png)
-      
-      *   **tblastx：**无
-
-   3. **biomingo_blast values：**（以 [NBK279675](https://www.ncbi.nlm.nih.gov/books/NBK279675/) 为标准）
+      *   **blastn：**
+          
+          * gapopen:6 gapextend:2
+          * gapopen:5 gapextend:2
+          * gapopen:4 gapextend:4
+          * gapopen:3 gapextend:3
+          * gapopen:2 gapextend:4
+          * gapopen:2 gapextend:2
+          * gapopen:0 gapextend:4
+          
+      *   **others(except tblastx)：**
+          
+          * gapopen:13 gapextend:1
+          * gapopen:12 gapextend:1
+          * gapopen:11 gapextend:2
+          * gapopen:11 gapextend:1
+          * gapopen:10 gapextend:2
+          * gapopen:10 gapextend:1
+          * gapopen:9 gapextend:2
+          * gapopen:9 gapextend:1
+          * gapopen:8 gapextend:2
+          * gapopen:7 gapextend:2
+          * gapopen:6 gapextend:2
 
 *  **-matrix**：Comparison Matrix（default = BLOSUM62）
 
