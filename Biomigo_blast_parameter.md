@@ -23,14 +23,14 @@
    设定字长大小，blastn为11， megablast 为28，其他为3。
 
    1. **[ncbi blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)：**( **粗体** 为网站默认值)
-      * blastn：7、**11**、15
+      *   blastn：7、**11**、15, &lt;Integer, &ge;4&gt;
       *   blastp：2、3、**6**
       *   blastx：2、3、**6**
       *   tblastn：2、3、**6**
       *   tblastx：2、**3**
 
    2. **biomingo_blast values：**
-      *   **from 2 to 15, sep=1**
+      *   **from 2 to 15, sep=1(其中 blastn：from 4 to 15, sep=1)**
 
 *  **-gapopen**：Cost to open a gap \[Integer\]
 
