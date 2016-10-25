@@ -30,7 +30,8 @@
       *   tblastx：2、**3**
 
    2. **biomingo_blast values：**
-      *   **from 2 to 15, sep=1(其中 blastn：from 4 to 15, sep=1)**
+      *   **blastn：from 4 to 15, sep=1**
+      *   **others：from 2 to 15, sep=1**
 
 *  **-gapopen**：Cost to open a gap \[Integer\]
 
