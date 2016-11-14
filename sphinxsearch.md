@@ -103,3 +103,4 @@ index index_name
     # We can tell from this config: index1, index2 and index3 are all just a part of an completed index, that means the index has be splited into three pieces; and there are two mirror indexes for index1 on hostname3 and hostname4
 }
 ```
+After the settings are completed, run `sudo indexer --all --rotate` to update all indexes while the `searchd` server is already up. Adding `--rotate` is necessary to update the indexes to the `searchd` server without restarting the server. You can just run `sudo indexer --rotate index_name` to update the special index.
