@@ -92,6 +92,7 @@ index index_name
     index_exact_words = 0 # available values are 0, 1; whether to index the original keywords along with the stemmed/remapped versions
     expand_keywords = 0 # available values are 0, 1; expand keywords with exact forms and/or stars when possible
     # below are for type = distributed only
+    ha_strategy = random # available values are random, nodeads, noerrors, roundrobin; agent mirror selection strategy, for load balancing
     local = none # the local index declaration in the distributed index
     agent = none # remote agent declaration in the distributed index, format is address-list:index-list, example:
     # assume there is a config below in a distributed index block:
