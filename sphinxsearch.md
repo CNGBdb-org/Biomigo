@@ -76,7 +76,8 @@ source source_name
     sql_sock = none # while setting this, leave `sql_host` and `sql_port` blank, for mysql, pgsql, mssql only
     sql_query_pre = none # While using mysql, you may need to set the charset, etc. This is for that purpose. for mysql, pgsql, mssql only
     sql_query = none # This is the most important settings for mysql, pgsql, mssql source data. Defines the main document fetch query.
-    sql_range_step = 1024 # This can split the `sql_query` into multi-part-query, it's useful if the total data is so large. For mysql, pgsql, mssql only
+    sql_query_range = none # set the range of the data that will be stored/indexed.
+    sql_range_step = 1024 # This can split the `sql_query` into multi-part-query, it's useful if the total data is so large. Only when `sql_query_range` is set, it affects. For mysql, pgsql, mssql only
     sql_attr_uint, sql_attr_bool, sql_attr_bigint, sql_attr_timestamp, sql_attr_float, sql_attr_multi, sql_attr_string, sql_attr_json = none # for mysql, pgsql, mssql only, declare attributes that will be stored but not be indexed. That means these fields can only be used for sorting and filtering, but not searching.
     sql_field_string = none # for mysql, pgsql, mssql only, declare fields that will bot only be stored, but also be indexed.    
 }
