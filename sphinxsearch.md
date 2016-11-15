@@ -16,7 +16,7 @@ Test index:
 
 #Advantage (well, just my personal consider)
 ##Easy to install
-You jsut need to run two or three commands (required root)
+You just need to run two or three commands (required root)
 
 on CentOS:
 ```
