@@ -108,3 +108,15 @@ index index_name
 }
 ```
 After the settings are completed, run `sudo indexer --all --rotate` to update all indexes while the `searchd` server is already up. Adding `--rotate` is necessary to update the indexes to the `searchd` server without restarting the server. You can just run `sudo indexer --rotate index_name` to update the special index.
+##High customizability
+What and how will the data be stored and indexed, all depend on your mind.
+##High availability, load balancing
+Sphinx supports features of distributing and sharding index, and using multi-threads to search. Example:
+- Sharding one large index into local/distributed multi-pieces, and using threads to speed up searching (HA)
+- deploy mirror indexes on different nodes, sphinx will automatically control the balance (LB)
+- combine the two strategies to build a large cluster of HA/LB
+#Disadvantage
+##Manually sharding
+Sphinx does not provide a setting for automatically sharding index into small pieces. All settings of shards must be manually defined. When shards grow or content of indexes vary, it is hard to maintain.
+##Hard disk cost of indexing
+The Operation of indexing (the `indexer` program) cost a large amount of hard disk. Example: indexing 1,000,000 entries with about 25 fields costs ~15GB space.
