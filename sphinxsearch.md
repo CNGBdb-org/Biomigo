@@ -115,6 +115,7 @@ Sphinx supports features of distributing and sharding index, and using multi-thr
 - Sharding one large index into local/distributed multi-pieces, and using threads to speed up searching (HA)
 - deploy mirror indexes on different nodes, sphinx will automatically control the balance (LB)
 - combine the two strategies to build a large cluster of HA/LB
+
 #Disadvantage
 ##Manually sharding
 Sphinx does not provide a setting for automatically sharding index into small pieces. All settings of shards must be manually defined. When shards grow or content of indexes vary, it is hard to maintain.
