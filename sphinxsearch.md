@@ -5,11 +5,15 @@ URI: http://sphinxsearch.com/about/sphinx/
 #Example test app
 http://172.17.10.19/laboratory/sphinx/search0/
 
-Currently, Sphinx backend of this app is deployed on 4 nodes (192.168.2.31-34, 172.17.10.19), with all meta data of gene and tumour type (~40,000 entries) of cancerdb.
+The test on large amount entries searching(same query on ensembl_variation_part_dist or ensembl_variation_dist) shows that shard distributed index save half time cost to the non-sharding index. On small amount entries index, this feature is not obvious.
 
-A much more previous test query on 1 node with 5 millions variaiton meta data from ensemble variaiton database cost less than 0.05s.
+Test index:
+- cancerdb_gene_part_dist: shard distributed index of ~36,000 gene entries on 4 nodes
+- cancerdb_gene_dist: mirror distributed index of ~36,000 gene entries on 4 nodes
+- cancerdb_tumour_type_dist: mirror distributed index of ~30 tumour type entries on 4 nodes
+- ensembl_variation_part_dist: shard distributed index of 4,000,000 variation entries on 4 nodes
+- ensembl_variation_dist: local index of 4,000,000 variation entries on 1 node
 
-Test will continue on this app for more data.
 #Advantage (well, just my personal consider)
 ##Easy to install
 You jsut need to run two or three commands (required root)
