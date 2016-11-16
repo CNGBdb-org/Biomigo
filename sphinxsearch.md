@@ -117,8 +117,12 @@ Sphinx supports features of distributing and sharding index, and using multi-thr
 - deploy mirror indexes on different nodes, sphinx will automatically control the balance (LB)
 - combine the two strategies to build a large cluster of HA/LB
 
+##Light resource cost
+Sphinx does not has a value of minimum required memory. The cost memory grows as the size of index grows. In current example test, the `searchd` program takes 1GB per 20GB index to provide HA search service.
 #Disadvantage
 ##Manually sharding
 Sphinx does not provide a setting for automatically sharding index into small pieces. All settings of shards must be manually defined. When shards grow or content of indexes vary, it is hard to maintain.
 ##Hard disk cost of indexing
 The Operation of indexing (the `indexer` program) cost a large amount of hard disk. Example: indexing 1,000,000 entries with about 25 fields costs ~15GB space.
+#Tip
+Detail to follow.
