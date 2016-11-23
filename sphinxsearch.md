@@ -119,10 +119,14 @@ Sphinx supports features of distributing and sharding index, and using multi-thr
 
 ##Light resource cost
 Sphinx does not has a value of minimum required memory. The cost memory grows as the size of index grows. In current example test, the `searchd` program takes 1GB per 20GB index to provide HA search service.
+##Multi-thread
+Sphinx supports multi-thread feature when query a distributed index.
 #Disadvantage
 ##Manually sharding
 Sphinx does not provide a setting for automatically sharding index into small pieces. All settings of shards must be manually defined. When shards grow or content of indexes vary, it is hard to maintain.
 ##Hard disk cost of indexing
 The Operation of indexing (the `indexer` program) cost a large amount of hard disk. Example: indexing 1,000,000 entries with about 25 fields costs ~15GB space.
+##Not a data storage
+Sphinx is designed and performs as search engine only. Its SQL-like syntax language (called SphinxQL) is for index search only and doesn't have full feature of SQL language. Although raw data can be stored in Sphinx, but can not be queried as in starndard SQL database, raw data in Sphinx can only be used to filter/sort the index-search result.
 #Tip
 Detail to follow.
