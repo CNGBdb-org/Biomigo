@@ -4,9 +4,13 @@
 
 The NCBI BLAST family of programs includes: 
 **blastp:** compares an amino acid query sequence against a protein sequence database 
+
 **blastn:** compares a nucleotide query sequence against a nucleotide sequence database 
+
 **blastx:** compares a nucleotide query sequence translated in all reading frames against a protein sequence database 
+
 **tblastn:** compares a protein query sequence against a nucleotide sequence database dynamically translated in all reading frames 
+
 **tblastx:** compares the six-frame translations of a nucleotide query sequence against the six-frame translations of a nucleotide sequence database.
 
 NCBI BLAST程序包括：
