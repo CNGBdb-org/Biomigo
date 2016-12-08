@@ -3,6 +3,7 @@
 ## 可用于BLAST搜索的程序
 
 The NCBI BLAST family of programs includes: 
+
 **blastp:** compares an amino acid query sequence against a protein sequence database 
 
 **blastn:** compares a nucleotide query sequence against a nucleotide sequence database 
@@ -106,7 +107,7 @@ When protein aligned to the nucleotide there are 6 possibilities of match at any
 
 Restricts database sequences to the number specified for which high-scoring segment pairs (HSPs) are reported; the default limit is 100\. If more database sequences than this happen to satisfy the statistical significance threshold for reporting (see EXPECT below), only the matches ascribed the greatest statistical significance are reported.
 
-将数据库序列限制为比对结果报告中高评分片段对（HSPs）的数量，默认限制为100。如果更多的数据库序列不足以满足报告的~~统计显着性阈值~~ 统计显著性阈值（见下面的EXPECT），则只 ~~报告~~ 记录具有最大统计意义的匹配。
+将数据库序列限制为比对结果报告中高评分片段对（HSPs）的数量，默认限制为100。如果更多的数据库序列不足以满足报告的 ~~统计显着性阈值~~ 统计显著性阈值（见下面的EXPECT），则只 ~~报告~~ 记录具有最大统计意义的匹配。
 
 **EXPECT:**
 
@@ -120,23 +121,23 @@ The statistical significance threshold for reporting matches against database se
 
 Mask off segments of the query sequence that have low compositional complexity, as determined by the SEG program of Wootton & Federhen (Computers and Chemistry, 1993) or, for BLASTN, by the DUST program of Tatusov and Lipman (in preparation). Filtering can eliminate statistically significant but biologically uninteresting reports from the blast output (e.g., hits against common acidic-, basic- or proline-rich regions), leaving the more biologically interesting regions of the query sequence available for specific matching against database sequences.
 
-~~掩蔽~~ 屏蔽具有低组成复杂性的查询序列 ~~的~~ 片段，~~如通过~~ 这取决于 Wootton＆Federhen（Computers and Chemistry，1993）的SEG程序 ~~确定的~~，而对于BLASTN, ~~通过~~则取决于 Tatusov 和 Lipman（~~在制备中~~ 开发准备中）的DUST程序 ~~确定~~。 过滤可以消除来自blast输出结果中具有统计学~~显着的~~显著但是生物学上~~不感兴趣~~ 没有意义的报告（例如，对常见的富含酸性，富含碱性或富含脯氨酸区域的匹配），留下~~查询序列的~~用于与数据库序列进行特异性匹配，更具生物学意义区域的查询序列。
+~~掩蔽~~ 屏蔽具有低组成复杂性的查询序列 ~~的~~ 片段，~~如通过~~ 这取决于 Wootton＆Federhen（Computers and Chemistry，1993）的SEG程序 ~~确定的~~，而对于BLASTN, ~~通过~~ 则取决于 Tatusov 和 Lipman（~~在制备中~~ 开发准备中）的DUST程序 ~~确定~~。 过滤可以消除来自blast输出结果中具有统计学 ~~显着的~~ 显著但是生物学上 ~~不感兴趣~~ 没有意义的报告（例如，对常见的富含酸性，富含碱性或富含脯氨酸区域的匹配），留下 ~~查询序列的~~ 用于与数据库序列进行特异性匹配，更具生物学意义区域的查询序列。
 
 Filtering is only applied to the query sequence (or its translation products), not to database sequences. Default filtering is DUST for BLASTN, SEG for other programs.
 
-过滤仅应用于查询序列（或其~~翻译产品~~翻译产物），而不应用于数据库序列。 ~~对于BLASTN，SEG为其他程序默认过滤为DUST~~ 对于BLASTN,默认使用DUST过滤，其他程序则默认SEG过滤。
+过滤仅应用于查询序列（或其 ~~翻译产品~~ 翻译产物），而不应用于数据库序列。 ~~对于BLASTN，SEG为其他程序默认过滤为DUST~~ 对于BLASTN,默认使用DUST过滤，其他程序则默认SEG过滤。
 
 It is not unusual for nothing at all to be masked by SEG, when applied to sequences in SWISS-PROT, so filtering should not be expected to always yield an effect. Furthermore, in some cases, sequences are masked in their entirety, indicating that the statistical significance of any matches reported against the unfiltered query sequence should be suspect.
 
-当应用于 SWISS-PROT 中的序列时，SEG不~~掩蔽~~ 屏蔽任何东西 ~~并不奇怪~~ 有时候也是正常的，因此不应期望过滤总是产生效果。 此外，在一些情况下，序列被完全屏蔽，~~指示~~ 这表明针对未过滤的查询序列报告的任何匹配的统计~~显着性~~ 显著性应该是可疑的。
+当应用于 SWISS-PROT 中的序列时，SEG 不 ~~掩蔽~~ 屏蔽任何东西 ~~并不奇怪~~ 有时候也是正常的，因此不应期望过滤总是产生效果。 此外，在一些情况下，序列被完全屏蔽，~~指示~~ 这表明针对未过滤的查询序列报告的任何匹配的统计 ~~显着性~~ 显著性应该是可疑的。
 
 **FILTER (Human repeats)**
 
-**过滤(~~人类重复~~人类重复序列)**
+**过滤(~~人类重复~~ 人类重复序列)**
 
 This option masks Human repeats (LINE's and SINE's) and is especially useful for human sequences that may contain these repeats. This option is still experimental and under development, so it may change in the near future.
 
-此选项掩盖~~人类重复~~人类重复序列（LINE's 和 SINE's），并且对可能包含这些重复片段的人类序列~~特别有用~~具有特别的作用。 该选项仍然是具有实验性的、正在开发中的，因此它可能在不久的将来~~改变~~有所更改。
+此选项掩盖 ~~人类重复~~ 人类重复序列（LINE's 和 SINE's），并且对可能包含这些重复片段的人类序列 ~~特别有用~~ 具有特别的作用。 该选项仍然是具有实验性的、正在开发中的，因此它可能在不久的将来 ~~改变~~ 有所更改。
 
 **FILTER (Mask for lookup table only)**
 
@@ -144,7 +145,7 @@ This option masks Human repeats (LINE's and SINE's) and is especially useful for
 
 This option masks only for purposes of constructing the lookup table used by BLAST. The BLAST extensions are performed without masking. This option is still experimental and may change in the near future.
 
-此选项的目的是仅用于构建BLAST使用的查找表。 BLAST~~扩展~~的扩展程序可以在在没有掩蔽的情况下执行。 此选项仍处于实验阶段，可能会在不久的将来更改。
+此选项的目的是仅用于构建BLAST使用的查找表。 BLAST ~~扩展~~ 的扩展程序可以在在没有掩蔽的情况下执行。 此选项仍处于实验阶段，可能会在不久的将来更改。
 
 **Word-size:**
 
@@ -152,7 +153,7 @@ This option masks only for purposes of constructing the lookup table used by BLA
 
 BLAST is a heuristic that works by finding word-matches between the query and database sequences. One may think of this process as finding "hot-spots" that BLAST can then use to initiate extensions that might eventually lead to full-blown alignments. For nucleotide-nucleotide searches (i.e., "blastn") an exact match of the entire word is required before an extension is initiated, so that one normally regulates the sensitivity and speed of the search by increasing or decreasing the word-size. For other BLAST searches non-exact word matches are taken into account based upon the similarity between words. The amount of similarity can be varied. The webpage allows the word-sizes 2, 3, and 6.
 
-BLAST是一种~~启发式方法~~启发式的程序，通过查找~~查询~~查询序列和数据库序列之间词的匹配来工作。 人们可能认为这个过程是找到"~~热点~~hot-spots"，然后BLAST~~然后~~可以使用~~它~~该"hot-spots"来启动扩展，最终~~可能导致~~达到完全对齐的匹配。 对于核苷酸 - 核苷酸搜索（即，"blastn"），在启动延伸之前需要完整单词的精确匹配，~~使得通常~~从而可以通过增加或减小单词的大小从而来调节搜索的灵敏度和速度。 对于其他 BLAST 搜索，~~基于词之间的相似性考虑非精确词匹配~~则基于词之间的相似性对非精确词匹配进行了考虑。 相似性的量可以变化。 ~~网页允许字大小2,3和6。~~本网页版 Blast 允许字大小为2-15。
+BLAST 是一种 ~~启发式方法~~ 启发式的程序，通过查找 ~~查询~~ 查询序列和数据库序列之间词的匹配来工作。 人们可能认为这个过程是找到" ~~热点~~ hot-spots"，然后 BLAST ~~然后~~ 可以使用 ~~它~~ 该 "hot-spots" 来启动扩展，最终 ~~可能导致~~ 达到完全对齐的匹配。 对于核苷酸 - 核苷酸搜索（即，"blastn"），在启动延伸之前需要完整单词的精确匹配，~~使得通常~~ 从而可以通过增加或减小单词的大小从而来调节搜索的灵敏度和速度。 对于其他 BLAST 搜索，~~基于词之间的相似性考虑非精确词匹配~~ 则基于词之间的相似性对非精确词匹配进行了考虑。 相似性的量可以变化。 ~~网页允许字大小2,3和6。~~ 本网页版 Blast 允许字大小为2-15。
 
 **Matrix:**
 
@@ -160,7 +161,7 @@ BLAST是一种~~启发式方法~~启发式的程序，通过查找~~查询~~查�
 
 A key element in evaluating the quality of a pairwise sequence alignment is the "substitution matrix", which assigns a score for aligning any possible pair of residues. The theory of amino acid substitution matrices is described in [1], and applied to DNA sequence comparison in [2]. In general, different substitution matrices are tailored to detecting similarities among sequences that are diverged by differing degrees [1-3]. A single matrix may nevertheless be reasonably efficient over a relatively broad range of evolutionary change [1-3]. Experimentation has shown that the BLOSUM-62 matrix [4] is among the best for detecting most weak protein similarities. For particularly long and weak alignments, the BLOSUM-45 matrix may prove superior. A detailed statistical theory for gapped alignments has not been developed, and the best gap costs to use with a given substitution matrix are determined empirically. Short alignments need to be relatively strong (i.e. have a higher percentage of matching residues) to rise above background noise. Such short but strong alignments are more easily detected using a matrix with a higher "relative entropy" [1] than that of BLOSUM-62\. In particular, short query sequences can only produce short alignments, and therefore database searches with short queries should use an appropriately tailored matrix. The BLOSUM series does not include any matrices with relative entropies suitable for the shortest queries, so the older PAM matrices [5,6] may be used instead. For proteins, a provisional table of recommended substitution matrices and gap costs for various query lengths is:
 
-评估成对序列比对的质量的关键因素是"置换矩阵"，其指定用于比对任何可能的残基对的分数。氨基酸取代矩阵的理论在[1]中描述，并应用于[2]中的DNA序列比较。一般来说，~~不同的替代矩阵被定制以检测以不同程度发散的序列之间的相似性~~定制不同的替换矩阵可以用来检测不同发散程度序列之间的相似性[1-3]。然而，~~单个矩阵在相对宽范围的进化变化上可能是相当有效的~~在相对较宽范围的进化改变上，单个矩阵可能是相当有效的[1-3]。实验表明，BLOSUM-62矩阵[4]是检测最弱蛋白相似性的最佳选择之一。对于特别长和弱的比对，BLOSUM-45矩阵~~可以证明是优越的~~被证明更具优越性。~~尚未开发带间隙比对的详细统计学理论~~用于空位比对更具体的统计学理论尚未被开发出来，且用于给定~~替代~~替换矩阵的最佳空位罚分是凭经验确定的。短比对需要相对强（即具有更高百分比的匹配残基）以升高到高于背景噪声。使用具有比BLOSUM-62高的"相对熵"[1]的矩阵更容易检测这种短而强的比对。特别地，短查询序列只能产生短~~对准~~比对，因此具有短查询的数据库搜索应当使用适当定制的矩阵。 BLOSUM系列不包括具有适于最短查询的相对熵的任何矩阵，因此可以使用较旧的PAM矩阵[5,6]。对于蛋白质，各种查询长度的推荐置换矩阵和空位罚分的临时表是：
+评估成对序列比对的质量的关键因素是"置换矩阵"，其指定用于比对任何可能的残基对的分数。氨基酸取代矩阵的理论在[1]中描述，并应用于[2]中的 DNA 序列比较。一般来说，~~不同的替代矩阵被定制以检测以不同程度发散的序列之间的相似性~~ 定制不同的替换矩阵可以用来检测不同发散程度序列之间的相似性[1-3]。然而，~~单个矩阵在相对宽范围的进化变化上可能是相当有效的~~ 在相对较宽范围的进化改变上，单个矩阵可能是相当有效的[1-3]。实验表明，BLOSUM-62 矩阵[4]是检测最弱蛋白相似性的最佳选择之一。对于特别长和弱的比对，BLOSUM-45 矩阵 ~~可以证明是优越的~~ 被证明更具优越性。~~尚未开发带间隙比对的详细统计学理论~~ 用于空位比对更具体的统计学理论尚未被开发出来，且用于给定 ~~替代~~ 替换矩阵的最佳空位罚分是凭经验确定的。短比对需要相对强（即具有更高百分比的匹配残基）以升高到高于背景噪声。使用具有比 BLOSUM-62 高的"相对熵"[1]的矩阵更容易检测这种短而强的比对。特别地，短查询序列只能产生短 ~~对准~~ 比对，因此具有短查询的数据库搜索应当使用适当定制的矩阵。 BLOSUM 系列不包括具有适于最短查询的相对熵的任何矩阵，因此可以使用较旧的 PAM 矩阵[5,6]。对于蛋白质，各种查询长度的推荐置换矩阵和空位罚分的临时表是：
 
 |  **Query Length** | **Substitution Matrix**   | **Gap Costs**  |
 | :------------: | :------------: | :------------: |
@@ -171,7 +172,7 @@ A key element in evaluating the quality of a pairwise sequence alignment is the 
 
 The raw score of an alignment is the sum of the scores for aligning pairs of residues and the scores for gaps. Gapped BLAST and PSI-BLAST use "affine gap costs" which charge the score -a for the existence of a gap, and the score -b for each residue in the gap. Thus a gap of k residues receives a total score of -(a+bk); specifically, a gap of length 1 receives the score -(a+b).
 
-比对的原始得分是用于~~比对残基~~残基对比对对和用于空位罚分得分的总和。 Gapped BLAST 和 PSI-BLAST 使用的"空位延伸罚分"，~~其对于缺口的存在对记分 -a进行计数~~对已经存在的一个空位记分为 -a ，~~并且对于缺口中的每个残基对记分-b进行计数~~对一个空位中的每一个残基则计分为 -b。  因此，k个残基的~~缺口~~空位~~接受~~获得的总分数为 - （a + bk）; 具体地，长度1的间隙~~接收~~获取的得分为 - （a + b）。
+比对的原始得分是用于 ~~比对残基~~ 残基对比对对和用于空位罚分得分的总和。 Gapped BLAST 和 PSI-BLAST 使用的"空位延伸罚分"，~~其对于缺口的存在对记分 -a进行计数~~ 对已经存在的一个空位记分为 -a ，~~并且对于缺口中的每个残基对记分-b进行计数~~ 对一个空位中的每一个残基则计分为 -b。  因此，k个残基的 ~~缺口~~ 空位 ~~接受~~ 获得的总分数为 - （a + bk）; 具体地，长度1的间隙 ~~接收~~ 获取的得分为 - （a + b）。
 
 ## 6.  BLAST Program Advanced Options
 
