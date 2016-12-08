@@ -1,4 +1,4 @@
-## 1. Programs available for the BLAST search**
+## 1. Programs available for the BLAST search
 
 ## 可用于BLAST搜索的程序
 
